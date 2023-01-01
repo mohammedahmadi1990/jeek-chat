@@ -1,16 +1,9 @@
-
+import "./style.scss";
+import "semantic-ui-css/semantic.min.css";
+import { Home } from "./pages/Home";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello
-        </p>
-        
-      </header>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
