@@ -106,18 +106,22 @@
     width: 9%;
   }
 
-  .icon {
-    cursor: pointer;
-    padding: 10px 0 30px 50%;
+  .nav-icons {
+    padding: 10px 50% 30px 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 18px;
     color: #125259;
+
+    .icon {
+      cursor: pointer;
+    }
   }
 
   .sign-out {
-    margin-top: 200px;
+    margin-top: 160px;
   }
 
   .selected {
@@ -134,23 +138,48 @@
     border-radius: 0 10px 10px 0;
     width: 100%;
 
-    .text-input {
-      border-radius: 10px 10px 10px 10px;
-      margin: 20px 0 0 60px;
-      padding: 10px 10px 40px 10px;
-      width: 87%;
-      border: 1px solid #125259;
-      font-size: 16px;
-    }
+    .message-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 450px;
 
-    button {
-      background-color: #5f9ea6;
-      color: white;
-      margin-top: 10px;
-      padding: 10px 150px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      .chat-input-text {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .text-input {
+          border-radius: 10px 10px 10px 10px;
+          padding: 10px 10px 30px 10px;
+
+          border: 1px solid #125259;
+          font-size: 16px;
+          height: 60px;
+          overflow: hidden;
+          outline-color: #125259;
+        }
+        .chat-send-icon {
+          color: #868686;
+          margin-left: -33px;
+          margin-top: 15px;
+          transform: rotate(-40deg);
+          cursor: pointer;
+        }
+      }
+
+      .chat-attach-icon {
+        color: #868686;
+        margin: 17px 10px 0 10px;
+        cursor: pointer;
+        transform: rotate(30deg);
+      }
+
+      .chat-language-icon {
+        margin: 10px 12px 0 0;
+        color: #868686;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -192,9 +221,8 @@
     border-radius: 15px;
     width: 100px;
     height: 30px;
-    .icon {
-      color: #b3b3b3;
-      padding: 4px 25px 0 0;
-    }
+    color: #b3b3b3;
+    padding: 5px 10px 10px 10px;
+    column-gap: 12px;
   }
 }
