@@ -138,11 +138,123 @@
     border-radius: 0 10px 10px 0;
     width: 100%;
 
+    .open-chat {
+      padding: 8px 0 0 20px;
+      font-size: 10px;
+      color: #868686;
+      padding-left: 20px;
+      border-bottom: 1px solid #cacaca;
+      margin: 0 10px 0 10px;
+      .open-chat-title {
+        color: #282828;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .open-chat-status {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        .open-chat-status-sign {
+          margin-top: 4px;
+          border-radius: 50%;
+          width: 11px;
+          height: 11px;
+        }
+        .open-chat-status-message {
+          color: #868686;
+          font-size: 10px;
+        }
+        .online {
+          background-color: green;
+        }
+        .away {
+          background-color: yellow;
+        }
+        .offline {
+          background-color: #868686;
+        }
+      }
+    }
+
+    .open-chat-body {
+      padding-top: 15px;
+      margin-top: 1px;
+      margin-left: -30px;
+      margin-right: 10px;
+      height: 390px;
+      overflow: auto;
+
+      .receiver {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        list-style: none;
+
+        .receiver-profile {
+          width: 45px;
+          height: 45px;
+
+          border-radius: 50%;
+        }
+        .receiver-message-container {
+          display: flex;
+          flex-direction: column;
+          .receiver-message {
+            font-size: 13px;
+            color: #282828;
+            padding: 5px;
+            border-radius: 5px;
+            width: 200px;
+            background-color: #a9d6dc;
+          }
+          .receiver-time {
+            font-size: 8px;
+            color: #b3b3b3;
+            text-align: right;
+          }
+        }
+      }
+
+      .sender {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin-right: 5px;
+        gap: 5px;
+
+        float: right;
+        .sender-profile {
+          float: right;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+        }
+        .sender-message-container {
+          display: flex;
+          flex-direction: column;
+          .sender-message {
+            border-radius: 5px;
+            font-size: 13px;
+            color: #282828;
+            padding: 5px;
+            width: 200px;
+            background-color: #dfdfdf;
+          }
+          .sender-time {
+            font-size: 8px;
+            color: #b3b3b3;
+          }
+        }
+      }
+    }
+
     .message-bar {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding-top: 450px;
+      padding-top: 1px;
 
       .chat-input-text {
         width: 100%;
@@ -152,7 +264,7 @@
         .text-input {
           border-radius: 10px 10px 10px 10px;
           padding: 10px 10px 30px 10px;
-
+          min-width: 97%;
           border: 1px solid #125259;
           font-size: 16px;
           height: 60px;
