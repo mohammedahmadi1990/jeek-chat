@@ -36,13 +36,13 @@ export const Chat = () => {
           </div>
         </li>
         <li className="sender">
+          <img className="sender-profile" src={ProfileImageSender} alt="" />
           <div className="sender-message-container">
             <div className="sender-message">
               Hi, I planned to come by tomorow and will let you know.
             </div>
             <div className="sender-time">Yesterday 06:19 PM</div>
           </div>
-          <img className="sender-profile" src={ProfileImageSender} alt="" />
         </li>
         <li className="receiver">
           <img className="receiver-profile" src={ProfileImageReceiver} alt="" />
@@ -72,11 +72,11 @@ export const Chat = () => {
           </div>
         </li>
         <li className="sender">
+          <img className="sender-profile" src={ProfileImageSender} alt="" />
           <div className="sender-message-container">
             <div className="sender-message">I will be there in 15mins</div>
             <div className="sender-time">Yesterday 06:19 PM</div>
           </div>
-          <img className="sender-profile" src={ProfileImageSender} alt="" />
         </li>
         <li className="receiver">
           <img className="receiver-profile" src={ProfileImageReceiver} alt="" />

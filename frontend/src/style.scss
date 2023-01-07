@@ -1,3 +1,29 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 760px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+// Colors
+$offline: #a7a7a6;
+$away: yellow;
+$online: green;
+$silent: #125259;
+$notification: red;
+$iconColor: #125259;
+
 .register {
   background-color: #5f9ea6;
   display: flex;
@@ -113,7 +139,7 @@
     justify-content: center;
     align-items: center;
     gap: 18px;
-    color: #125259;
+    color: $iconColor;
 
     .icon {
       cursor: pointer;
@@ -256,21 +282,21 @@
           }
 
           .new {
-            background-color: red;
+            background-color: $notification;
           }
 
           .silent {
-            background-color: #125259;
+            background-color: $silent;
           }
 
           .online {
-            background-color: green;
+            background-color: $online;
           }
           .away {
-            background-color: yellow;
+            background-color: $away;
           }
           .offline {
-            background-color: #a7a7a6;
+            background-color: $offline;
           }
         }
       }
@@ -315,13 +341,13 @@
           font-size: 10px;
         }
         .online {
-          background-color: green;
+          background-color: $online;
         }
         .away {
-          background-color: yellow;
+          background-color: $away;
         }
         .offline {
-          background-color: #868686;
+          background-color: $offline;
         }
       }
     }
@@ -333,6 +359,8 @@
       margin-right: 10px;
       height: 390px;
       overflow: auto;
+      display: flex;
+      flex-direction: column;
 
       .receiver {
         display: flex;
@@ -343,7 +371,6 @@
         .receiver-profile {
           width: 45px;
           height: 45px;
-
           border-radius: 50%;
         }
         .receiver-message-container {
@@ -352,9 +379,9 @@
           .receiver-message {
             font-size: 13px;
             color: #282828;
-            padding: 5px;
-            border-radius: 5px;
-            width: 200px;
+            border-radius: 15px 15px 15px 0;
+            padding: 10px;
+            max-width: 300px;
             background-color: #a9d6dc;
           }
           .receiver-time {
@@ -368,7 +395,7 @@
       .sender {
         list-style: none;
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         margin-right: 5px;
         gap: 5px;
 
@@ -383,11 +410,11 @@
           display: flex;
           flex-direction: column;
           .sender-message {
-            border-radius: 5px;
+            border-radius: 15px 15px 0 15px;
             font-size: 13px;
             color: #282828;
-            padding: 5px;
-            width: 200px;
+            padding: 10px;
+            max-width: 300px;
             background-color: #dfdfdf;
           }
           .sender-time {
@@ -425,6 +452,9 @@
           margin-top: 15px;
           transform: rotate(-40deg);
           cursor: pointer;
+          &:hover {
+            color: $iconColor;
+          }
         }
       }
 
@@ -433,12 +463,18 @@
         margin: 17px 10px 0 10px;
         cursor: pointer;
         transform: rotate(30deg);
+        &:hover {
+          color: $iconColor;
+        }
       }
 
       .chat-language-icon {
         margin: 10px 12px 0 0;
         color: #868686;
         cursor: pointer;
+        &:hover {
+          color: $iconColor;
+        }
       }
     }
   }
