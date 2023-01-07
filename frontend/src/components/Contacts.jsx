@@ -84,7 +84,7 @@ export const Contacts = () => {
           </div>
         </div>
       </div>
-      <div className="contact">
+      {/* <div className="contact">
         <img src={ProfileImage2} alt="" className="profile-photo" />
         <div className="data-wrapper">
           <div className="title-wrapper">
@@ -131,7 +131,7 @@ export const Contacts = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
