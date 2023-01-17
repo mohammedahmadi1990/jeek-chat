@@ -489,6 +489,10 @@ $iconColor: #125259;
     height: 60px;
     position: relative;
     display: inline-block;
+    &:hover {
+      border: 3px solid white;
+      cursor: pointer;
+    }
   }
   .status {
     background-color: green;
@@ -520,5 +524,14 @@ $iconColor: #125259;
     color: #b3b3b3;
     padding: 5px 10px 10px 10px;
     column-gap: 12px;
+    &:hover {
+      border: 1px solid $iconColor;
+    }
+    .icon {
+      &:hover {
+        cursor: pointer;
+        color: $iconColor;
+      }
+    }
   }
 }

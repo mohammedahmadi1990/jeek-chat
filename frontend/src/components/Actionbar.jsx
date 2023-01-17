@@ -6,9 +6,9 @@ export const Actionbar = () => {
   return (
     <div className="actionbarContainer">
       <div className="iconGroup">
-        <AiOutlinePushpin size={19} />
-        <AiFillStar size={19} />
-        <AiFillBell size={19} />
+        <AiOutlinePushpin className="icon" size={19} />
+        <AiFillStar className="icon" size={19} />
+        <AiFillBell className="icon" size={19} />
       </div>
     </div>
   );
