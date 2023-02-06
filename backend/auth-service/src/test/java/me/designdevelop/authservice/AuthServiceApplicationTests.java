@@ -1,4 +1,4 @@
-package com.jeekchat.authservice;
+package me.designdevelop.authservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
