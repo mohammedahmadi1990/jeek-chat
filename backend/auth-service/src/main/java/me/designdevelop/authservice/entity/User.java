@@ -2,12 +2,19 @@ package me.designdevelop.authservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class User {
 
     @Id
@@ -18,6 +25,12 @@ public class User {
     private String username;
 
     private String password;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     @Column(unique = true)
     private String email;
@@ -38,4 +51,12 @@ public class User {
     @Column(unique = true)
     private String googleId;
 
+    public User(String username, String password, String email, String phoneNumber, String firstname, String surname) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.firstname = firstname;
+        this.surname = surname;
+    }
 }
